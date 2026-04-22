@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Céline Nails & Beauty — Institut Ongles à Paris 1er</title>
+    <meta name="description" content="Institut de beauté spécialisé dans la manucure, pose gel, nail art et soins des mains à Paris. Techniciennes certifiées, produits clean, résultats durables.">
+    <meta name="keywords" content="nail salon paris, manucure paris, pose gel paris, nail art paris, institut ongles paris 1er">
+    <meta property="og:title" content="Céline Nails & Beauty — Paris">
+    <meta property="og:description" content="Sublimez vos mains chez Céline Nails, votre institut beauté au cœur de Paris.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.Céline-nails.fr">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#c9748a',
+                        primaryDark: '#8b4c5e',
+                        accent: '#e8b4bc',
+                        bgMain: '#fdf8f8',
+                        bgSection: '#fce4ec',
+                        textMain: '#2d1a20',
+                        textMuted: '#7a5a62',
+                        dark: '#3b1a2a',
+                        white: '#ffffff'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.05)',
+                        'hover': '0 10px 25px rgba(201, 116, 138, 0.15)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --color-primary: #c9748a;
+            --color-primary-dark: #8b4c5e;
+            --color-accent: #e8b4bc;
+            --color-bg: #fdf8f8;
+            --color-bg-section: #fce4ec;
+            --color-text: #2d1a20;
+            --color-text-muted: #7a5a62;
+            --color-dark: #3b1a2a;
+            --color-white: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            overflow-x: hidden;
+        }
+
+        /* Typography sizing overrides */
+        h1 { font-size: 3.5rem; line-height: 1.1; }
+        h2 { font-size: 2.25rem; line-height: 1.2; }
+        h3 { font-size: 1.5rem; line-height: 1.3; }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.75rem; }
+            h3 { font-size: 1.25rem; }
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(201, 116, 138, 0.2);
+        }
+        .btn-primary:hover, .btn-primary:focus {
+            background-color: var(--color-primary-dark);
+            box-shadow: 0 6px 15px rgba(139, 76, 94, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-outline:hover, .btn-outline:focus {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost-white {
+            border: 2px solid var(--color-white);
+            color: var(--color-white);
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-ghost-white:hover, .btn-ghost-white:focus {
+            background-color: var(--color-white);
+            color: var(--color-text);
+            transform: translateY(-2px);
+        }
+
+        /* Animations */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        @keyframes pulse-dot {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(201, 116, 138, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(201, 116, 138, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(201, 116, 138, 0); }
+        }
+        .pulse-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--color-primary);
+            border-radius: 50%;
+            margin-right: 6px;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+        .animate-bounce-subtle {
+            animation: bounce-subtle 2s infinite ease-in-out;
+        }
+
+        /* Layout Utilites */
+        .section-padding {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        @media (max-width: 768px) {
+            .section-padding {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+        }
+        .container-custom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Nav Transition */
+        #navbar {
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+        }
+        #navbar.scrolled {
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        #navbar.scrolled .nav-link {
+            color: var(--color-text);
+        }
+        #navbar.scrolled .logo-text {
+            color: var(--color-text);
+        }
+
+        /* Pricing Tabs */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Masonry Fixes */
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--color-bg); }
+        ::-webkit-scrollbar-thumb { background: var(--color-accent); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--color-primary); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 1. NAVIGATION BAR -->
+    <nav id="navbar" class="fixed w-full z-50 top-0 left-0 py-4 text-white">
+        <div class="container-custom flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group" aria-label="Retour à l'accueil">
+                <i class="fa-solid fa-sparkles text-primary group-hover:text-primaryDark transition-colors"></i>
+                <span class="logo-text font-serif text-2xl font-bold tracking-wide">Céline</span>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center space-x-8 font-medium">
+                <a href="#accueil" class="nav-link hover:text-primary transition-colors">Accueil</a>
+                <a href="#services" class="nav-link hover:text-primary transition-colors">Nos Services</a>
+                <a href="#tarifs" class="nav-link hover:text-primary transition-colors">Tarifs</a>
+                <a href="#galerie" class="nav-link hover:text-primary transition-colors">Galerie</a>
+                <a href="#avis" class="nav-link hover:text-primary transition-colors">Avis</a>
+                <a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a>
+            </div>
+
+            <!-- CTA Buttons (Desktop) -->
+            <div class="hidden lg:flex items-center space-x-4">
+                </a>
+                <a href="#reservation" class="btn-primary">
+                    <i class="fa-regular fa-calendar-check mr-2"></i>Prendre RDV
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl focus:outline-none logo-text" aria-label="Ouvrir le menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 text-textMain lg:hidden flex flex-col">
+            <a href="#accueil" class="mobile-link px-6 py-4 border-b border-gray-50 hover:bg-gray-50">Accueil</a>
+            <a href="#services" class="mobile-link px-6 py-4 border-b border-gray-50 hover:bg-gray-50">Nos Services</a>
+            <a href="#tarifs" class="mobile-link px-6 py-4 border-b border-gray-50 hover:bg-gray-50">Tarifs</a>
+            <a href="#galerie" class="mobile-link px-6 py-4 border-b border-gray-50 hover:bg-gray-50">Galerie</a>
+            <a href="#avis" class="mobile-link px-6 py-4 border-b border-gray-50 hover:bg-gray-50">Avis</a>
+            <a href="#contact" class="mobile-link px-6 py-4 border-b border-gray-50 hover:bg-gray-50">Contact</a>
+            <div class="px-6 py-6 flex flex-col gap-3">
+                <a href="#reservation" class="btn-primary w-full justify-center">📅 Prendre RDV</a>
+                <a href="#carte-cadeau" class="btn-outline w-full justify-center">🎁 Carte Cadeau</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 2. HERO SECTION -->
+        <section id="accueil" class="relative min-h-screen flex items-center justify-center pt-20">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://placehold.co/1920x1080/f5e6e8/8b4c5e?text=Céline+Nails" alt="Intérieur de l'institut Céline Nails" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/40"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="relative z-10 container-custom text-center text-white fade-in-section">
+                <span class="inline-block py-1 px-4 rounded-full bg-white/20 backdrop-blur-md text-sm font-medium tracking-wider uppercase mb-6 border border-white/30">
+                    Institut de beauté · Paris 1er
+                </span>
+                <h1 class="font-serif font-bold mb-6 drop-shadow-md">L'art de sublimer vos mains</h1>
+                <p class="text-lg md:text-xl font-light max-w-2xl mx-auto mb-10 drop-shadow">
+                    Manucure, pose gel, nail art et soins premium dans un cadre raffiné au cœur de Paris. L'attention que vous méritez.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#reservation" class="btn-primary text-lg px-8 py-4 w-full sm:w-auto">Prendre rendez-vous</a>
+                    <a href="#services" class="btn-ghost-white text-lg px-8 py-4 w-full sm:w-auto">Découvrir nos services</a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 text-white opacity-80">
+                <a href="#trust" aria-label="Défiler vers le bas">
+                    <i class="fa-solid fa-chevron-down text-2xl animate-bounce-subtle"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. TRUST BAR -->
+        <section id="trust" class="bg-accent/20 py-8 border-b border-primary/10">
+            <div class="container-custom">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="flex flex-col items-center gap-2 fade-in-section">
+                        <i class="fa-solid fa-star text-primary text-2xl"></i>
+                        <p class="font-serif font-semibold text-textMain">4.9/5 sur Google</p>
+                        <p class="text-sm text-textMuted">+320 avis clients</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 fade-in-section" style="transition-delay: 200ms;">
+                        <i class="fa-solid fa-certificate text-primary text-2xl"></i>
+                        <p class="font-serif font-semibold text-textMain">+8 ans d'expérience</p>
+                        <p class="text-sm text-textMuted">Techniciennes certifiées</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 fade-in-section" style="transition-delay: 200ms;">
+                        <i class="fa-solid fa-leaf text-primary text-2xl"></i>
+                        <p class="font-serif font-semibold text-textMain">Produits de qualité</p>
+                        <p class="text-sm text-textMuted">Formules respectueuses</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 fade-in-section" style="transition-delay: 300ms;">
+                        <i class="fa-solid fa-location-dot text-primary text-2xl"></i>
+                        <p class="font-serif font-semibold text-textMain">Paris 1er</p>
+                        <p class="text-sm text-textMuted">Accès facile par le Métro</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SERVICES SECTION -->
+        <section id="services" class="section-padding bg-bgMain">
+            <div class="container-custom">
+                <div class="text-center mb-16 fade-in-section">
+                    <h2 class="text-5xl font-serif font-bold text-textMain mb-4 relative inline-block">
+                        Nos Prestations
+                        <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-primary/40 rounded"></span>
+                    </h2>
+                    <p class="text-textMuted text-lg mt-4">Des soins d'exception pour des mains et ongles sublimés</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-soft card-hover border border-gray-100 fade-in-section relative group">
+                        <img src="AA1.JPG" alt="Manucure Classique" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="p-6">
+                            <h3 class="font-serif font-semibold text-textMain mb-2">Manucure Classique</h3>
+                            <p class="text-textMuted text-sm mb-4 h-10 overflow-hidden">Soin complet des ongles, lime, cuticules et vernis classique.</p>
+                            <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-100">
+                                <span class="font-medium text-primaryDark">À partir de 25€</span>
+                                <a href="#tarifs" class="text-primary hover:text-primaryDark text-sm font-semibold flex items-center gap-1 transition-colors">
+                                    En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-soft card-hover border border-gray-100 fade-in-section relative group" style="transition-delay: 100ms;">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow">BEST SELLER</div>
+                        <img src="AB1.JPEG" alt="Pose Gel et Résine" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="p-6">
+                            <h3 class="font-serif font-semibold text-textMain mb-2">Pose Gel & Résine</h3>
+                            <p class="text-textMuted text-sm mb-4 h-10 overflow-hidden">Pose complète gel ou résine pour des ongles solides et brillants durables.</p>
+                            <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-100">
+                                <span class="font-medium text-primaryDark">À partir de 45€</span>
+                                <a href="#tarifs" class="text-primary hover:text-primaryDark text-sm font-semibold flex items-center gap-1 transition-colors">
+                                    En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-soft card-hover border border-gray-100 fade-in-section relative group" style="transition-delay: 200ms;">
+                        <img src="AC1.JPEG" alt="Nail Art et Décoration" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="p-6">
+                            <h3 class="font-serif font-semibold text-textMain mb-2">Nail Art & Décoration</h3>
+                            <p class="text-textMuted text-sm mb-4 h-10 overflow-hidden">Motifs, french, dégradés, strass : laissez libre cours à votre créativité.</p>
+                            <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-100">
+                                <span class="font-medium text-primaryDark">+15€ environ</span>
+                                <a href="#tarifs" class="text-primary hover:text-primaryDark text-sm font-semibold flex items-center gap-1 transition-colors">
+                                    En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-soft card-hover border border-gray-100 fade-in-section relative group">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow">BEST SELLER</div>
+                        <img src="AD1.JPG" alt="Vernis Semi-Permanent" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="p-6">
+                            <h3 class="font-serif font-semibold text-textMain mb-2">Semi-Permanent</h3>
+                            <p class="text-textMuted text-sm mb-4 h-10 overflow-hidden">Vernis semi-permanent longue tenue, brillance impeccable jusqu'à 3 semaines.</p>
+                            <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-100">
+                                <span class="font-medium text-primaryDark">À partir de 35€</span>
+                                <a href="#tarifs" class="text-primary hover:text-primaryDark text-sm font-semibold flex items-center gap-1 transition-colors">
+                                    En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-soft card-hover border border-gray-100 fade-in-section relative group" style="transition-delay: 100ms;">
+                        <div class="absolute top-4 right-4 bg-dark text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow flex items-center">
+                            <span class="pulse-dot bg-accent"></span> NOUVEAU
+                        </div>
+                        <img src="AE1.JPEG" alt="Extensions Ongles" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="p-6">
+                            <h3 class="font-serif font-semibold text-textMain mb-2">Extensions Ongles</h3>
+                            <p class="text-textMuted text-sm mb-4 h-10 overflow-hidden">Allongement par capsules, polygel ou fibre de verre pour un résultat naturel.</p>
+                            <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-100">
+                                <span class="font-medium text-primaryDark">À partir de 55€</span>
+                                <a href="#tarifs" class="text-primary hover:text-primaryDark text-sm font-semibold flex items-center gap-1 transition-colors">
+                                    En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-soft card-hover border border-gray-100 fade-in-section relative group" style="transition-delay: 200ms;">
+                        <img src="AF1.JPG" alt="Soin Mains Premium" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="p-6">
+                            <h3 class="font-serif font-semibold text-textMain mb-2">Soin Mains Premium</h3>
+                            <p class="text-textMuted text-sm mb-4 h-10 overflow-hidden">Gommage, masque, massage et hydratation intense pour des mains veloutées.</p>
+                            <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-100">
+                                <span class="font-medium text-primaryDark">À partir de 40€</span>
+                                <a href="#tarifs" class="text-primary hover:text-primaryDark text-sm font-semibold flex items-center gap-1 transition-colors">
+                                    En savoir plus <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. DIFFERENTIATORS SECTION -->
+        <section class="section-padding bg-bgSection">
+            <div class="container-custom">
+                <div class="flex flex-col-reverse lg:flex-row items-center gap-12">
+                    <!-- Left: Text -->
+                    <div class="w-full lg:w-1/2 fade-in-section">
+                        <span class="text-primary font-semibold tracking-wider uppercase text-sm mb-2 block">Notre philosophie</span>
+                        <h2 class="font-serif font-bold text-textMain mb-6">Un soin sur mesure, une attention sincère</h2>
+                        <p class="text-textMuted mb-8 leading-relaxed">
+                            Chez Céline Nails & Beauty, nous refusons les prestations à la chaîne. Chaque cliente bénéficie d'un accueil personnalisé, de produits soigneusement sélectionnés et d'une technicienne dédiée du début à la fin. Notre ambition : sublimer votre beauté naturelle avec expertise et bienveillance.
+                        </p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-white text-primary rounded-full w-6 h-6 flex items-center justify-center shadow-sm shrink-0">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <span class="text-textMain font-medium">Techniciennes diplômées </span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-white text-primary rounded-full w-6 h-6 flex items-center justify-center shadow-sm shrink-0">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <span class="text-textMain font-medium">Produits certifiés et hypoallergéniques</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-white text-primary rounded-full w-6 h-6 flex items-center justify-center shadow-sm shrink-0">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <span class="text-textMain font-medium">Matériel stérilisé entre chaque cliente</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-white text-primary rounded-full w-6 h-6 flex items-center justify-center shadow-sm shrink-0">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <span class="text-textMain font-medium">Résultats durables garantis</span>
+                            </li>
+                        </ul>
+                        <a href="#galerie" class="btn-primary">Découvrir notre équipe</a>
+                    </div>
+                    
+                    <!-- Right: Image -->
+                    <div class="w-full lg:w-1/2 fade-in-section">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                            <div class="absolute inset-0 border-4 border-white rounded-2xl z-10 pointer-events-none"></div>
+                            <img src="AG1.JPEG" alt="L'équipe Céline Nails" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. TARIFS SECTION -->
+        <section id="tarifs" class="section-padding bg-bgMain">
+            <div class="container-custom max-w-4xl">
+                <div class="text-center mb-12 fade-in-section">
+                    <h2 class="text-5xl font-serif font-bold text-textMain mb-4 relative inline-block">
+                        Nos Tarifs
+                        <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-primary/40 rounded"></span>
+                    </h2>
+                    <p class="text-textMuted text-lg mt-4">Des prix transparents, sans mauvaise surprise</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-soft p-6 md:p-10 fade-in-section border border-gray-100">
+                    <!-- Tabs Navigation -->
+                    <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 border-b border-gray-200 pb-4">
+                        <button class="tab-btn active px-4 py-2 rounded-full font-medium text-sm md:text-base transition-colors bg-primary text-white shadow-md" data-target="tab-1">
+                            Manucure & Vernis
+                        </button>
+                        <button class="tab-btn px-4 py-2 rounded-full font-medium text-sm md:text-base transition-colors text-textMuted hover:bg-gray-100" data-target="tab-2">
+                            Pose & Extensions
+                        </button>
+                        <button class="tab-btn px-4 py-2 rounded-full font-medium text-sm md:text-base transition-colors text-textMuted hover:bg-gray-100" data-target="tab-3">
+                            Soins & Extras
+                        </button>
+                    </div>
+
+                    <!-- Tab Content 1 -->
+                    <div id="tab-1" class="tab-content active">
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Manucure classique</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">25€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Pose vernis classique</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">10€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Pose vernis semi-permanent</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">35€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Dépose seule</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">15€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Dépose + repose semi-permanent</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">45€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">French manucure</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">40€</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tab Content 2 -->
+                    <div id="tab-2" class="tab-content">
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Pose gel complète</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">55€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Pose résine complète</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">60€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Extensions capsules</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">65€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Polygel</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">70€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Remplissage (3 semaines)</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">40€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Nail art simple (par ongle)</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">3€</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tab Content 3 -->
+                    <div id="tab-3" class="tab-content">
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Soin mains premium</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">40€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Gommage mains</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">15€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Pose strass (forfait)</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">10€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Nail art complexe (par ongle)</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">5€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Bain paraffine</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">20€</span>
+                            </li>
+                            <li class="flex justify-between items-end">
+                                <span class="text-textMain font-medium pb-1">Soin cuticules intensif</span>
+                                <div class="flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></div>
+                                <span class="font-serif font-bold text-primaryDark text-lg">12€</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="text-xs text-textMuted mt-8 italic text-center">
+                        *Tarifs indicatifs, susceptibles d'évoluer. Devis personnalisé disponible sur demande en salon.
+                    </p>
+                    
+                    <div class="mt-8 text-center">
+                        <a href="#booking" class="btn-primary px-8">Réserver ma prestation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. GALLERY SECTION -->
+        <section id="galerie" class="section-padding bg-bgSection">
+            <div class="container-custom">
+                <div class="text-center mb-12 fade-in-section">
+                    <h2 class="text-5xl font-serif font-bold text-textMain mb-4 relative inline-block">
+    Notre Galerie
+    <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-primary/70 rounded"></span>
+</h2>
+                    <p class="text-textMuted text-lg mt-4">Quelques réalisations de notre équipe</p>
+                </div>
+
+                <!-- Masonry Grid -->
+                <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 fade-in-section">
+                    <div class="masonry-item relative group overflow-hidden rounded-xl bg-white">
+                        <img src="PHOTO6.JPEG" alt="Nail art réalisation 1" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-magnifying-glass text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="masonry-item relative group overflow-hidden rounded-xl bg-white">
+                        <img src="PHOTO7.JPEG" alt="Nail art réalisation 2" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-magnifying-glass text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="masonry-item relative group overflow-hidden rounded-xl bg-white">
+                        <img src="PHOTO8.JPEG" alt="Nail art réalisation 3" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-magnifying-glass text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="masonry-item relative group overflow-hidden rounded-xl bg-white">
+                        <img src="PHOTO9.JPEG" alt="Nail art réalisation 4" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-magnifying-glass text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="masonry-item relative group overflow-hidden rounded-xl bg-white">
+                        <img src="PHOTO10.JPEG" alt="Nail art réalisation 5" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-magnifying-glass text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="masonry-item relative group overflow-hidden rounded-xl bg-white">
+                        <img src="PHOTO11.JPEG" alt="Nail art réalisation 6" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-magnifying-glass text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="text-center mt-10 fade-in-section">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-outline border-primaryDark text-primaryDark hover:bg-primaryDark hover:text-white">
+                        Voir plus sur Instagram <i class="fa-brands fa-instagram ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. TESTIMONIALS SECTION -->
+        <section id="avis" class="section-padding bg-bgMain">
+            <div class="container-custom">
+                <div class="text-center mb-16 fade-in-section">
+                    <h2 class="text-5xl font-serif font-bold text-textMain mb-4 relative inline-block">
+                        Avis des Clients
+                        <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-primary/40 rounded"></span>
+                    </h2>
+                    <p class="text-textMuted text-lg mt-4 font-medium flex items-center justify-center gap-2">
+                        <span class="text-yellow-400"><i class="fa-solid fa-star"></i> 4.9</span> 
+                        sur Google · +320 avis authentiques
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                    <!-- Review 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 fade-in-section">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/20 text-primaryDark font-serif font-bold flex items-center justify-center text-xl shrink-0">
+                                SM
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-textMain">Sophie M.</h4>
+                                <div class="text-yellow-400 text-sm">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <span class="ml-auto text-xs text-gray-400">Il y a 1 semaine</span>
+                        </div>
+                        <p class="text-textMuted italic leading-relaxed">
+                            "Je viens chez Céline Nails depuis plus de 2 ans et je ne changerais pour rien au monde. La pose gel tient parfaitement, l'accueil est toujours chaleureux et les techniciennes sont vraiment à l'écoute. Un vrai moment de détente !"
+                        </p>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 fade-in-section" style="transition-delay: 100ms;">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-accent/30 text-primaryDark font-serif font-bold flex items-center justify-center text-xl shrink-0">
+                                CR
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-textMain">Camille R.</h4>
+                                <div class="text-yellow-400 text-sm">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <span class="ml-auto text-xs text-gray-400">Il y a 3 semaines</span>
+                        </div>
+                        <p class="text-textMuted italic leading-relaxed">
+                            "Résultat impeccable pour ma pose semi-permanent, ça fait déjà 3 semaines et pas une écaille ! L'ambiance est super agréable et les prix sont très raisonnables pour Paris. Je recommande vivement."
+                        </p>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 fade-in-section" style="transition-delay: 200ms;">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-100 text-textMuted font-serif font-bold flex items-center justify-center text-xl shrink-0">
+                                AD
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-textMain">Amélie D.</h4>
+                                <div class="text-yellow-400 text-sm">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <span class="ml-auto text-xs text-gray-400">Il y a 1 mois</span>
+                        </div>
+                        <p class="text-textMuted italic leading-relaxed">
+                            "J'avais réservé pour un nail art assez complexe et le résultat a dépassé mes attentes. La technicienne a pris le temps de comprendre exactement ce que je voulais. Vraiment professionnelles et talentueuses !"
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center fade-in-section">
+                    <a href="#" class="text-textMain hover:text-primary font-medium inline-flex items-center gap-2 transition-colors border-b border-transparent hover:border-primary pb-1">
+                        Voir d'autres avis sur<i class="fa-brands fa-google text-blue-500"></i> <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+       <!-- 9. BOOKING CALEDAR -->
+         
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Céline | Réservation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #9d5667;
+            --primary-light: #b56576; 
+            --secondary: #fdf4f6;
+            --accent: #d4a373;
+            --text-dark: #2d2d2d;
+            --bg-white: #FFFFFF;
+            --bg-light: #fcf8f9;
+            --radius-md: 12px;
+            --radius-lg: 24px;
+            --shadow-lg: 0 10px 25px rgba(157, 86, 103, 0.1);
+        }
+
+        body { font-family: 'Inter', sans-serif; background: var(--bg-light); color: var(--text-dark); margin: 0; }
+        
+        .booking-section { padding: 4rem 1rem; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 2rem; }
+        .section-title h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary); margin: 0; }
+
+        .cal-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            border: 1px solid #f2e1e5;
+        }
+
+        /* Header & Nav */
+        .cal-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 2rem;
+            background: var(--secondary);
+            border-bottom: 1px solid #f2e1e5;
+        }
+        .cal-month { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--primary); font-weight: 700; }
+        .cal-nav-btn {
+            width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--primary);
+            background: white; color: var(--primary); cursor: pointer; display: flex; align-items: center; justify-content: center;
+        }
+        .cal-nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+        /* Grid Structure */
+        .cal-days-header {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-bottom: 1px solid #f9ecef;
+            text-align: center;
+        }
+        .cal-day-col { padding: 1rem 0; border-right: 1px solid #f9ecef; }
+        .cal-day-name { display: block; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: #999; }
+        .cal-day-num { display: block; font-size: 1.1rem; font-weight: 600; }
+        .is-today { color: var(--primary); }
+
+        .cal-slots-wrap { 
+            max-height: 500px; 
+            overflow-y: auto; 
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        .day-slots-container { display: flex; flex-direction: column; gap: 8px; }
+
+        .cal-slot-btn {
+            width: 100%;
+            padding: 8px 0;
+            border-radius: 20px;
+            border: none;
+            background: var(--secondary);
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .cal-slot-btn:hover { background: var(--primary); color: white; transform: translateY(-2px); }
+
+        /* Modal */
+        .cal-modal-overlay {
+            position: fixed; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);
+            display: none; align-items: center; justify-content: center; z-index: 1000;
+        }
+        .cal-modal { background: white; padding: 2rem; border-radius: var(--radius-lg); width: 90%; max-width: 400px; text-align: center; }
+        .form-control { width: 100%; padding: 0.8rem; margin: 0.5rem 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
+        .btn-confirm { background: var(--primary); color: white; border: none; padding: 1rem; width: 100%; border-radius: 30px; font-weight: 600; cursor: pointer; margin-top: 1rem; }
+
+        @media (max-width: 768px) {
+            .cal-slots-wrap { gap: 5px; padding: 0.5rem; }
+            .cal-slot-btn { font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="section-padding bg-white">
+
+<section id="reservation" class="section-padding bg-white">
+    
+<div class="text-center mb-12 fade-in-section">
+                    <h2 class="text-5xl font-serif font-bold text-textMain mb-4 relative inline-block">
+    Réserver votre séance
+    <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-primary/70 rounded"></span>
+</h2>
+                    <p class="text-textMuted text-lg mt-4">Prenez soin de vous</p>
+                </div>
+
+        <div class="cal-card">
+            <div class="cal-nav">
+                <button class="cal-nav-btn" id="prevMonth"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="cal-month" id="monthDisplay">Avril 2026</div>
+                <button class="cal-nav-btn" id="nextMonth"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="cal-days-header" id="daysHeader">
+                </div>
+
+            <div class="cal-slots-wrap" id="slotsGrid">
+                </div>
+        </div>
+    </div>
+</section>
+
+<div class="cal-modal-overlay" id="modal">
+    <div class="cal-modal">
+        <h3 id="modalTitle" style="color: var(--primary); font-family: 'Playfair Display';">Confirmer le RDV</h3>
+        <p id="selectedDetails" style="font-weight: 600; font-size: 0.9rem;"></p>
+        <input type="text" class="form-control" placeholder="Nom complet">
+        <input type="tel" class="form-control" placeholder="Téléphone">
+<select class="form-control" id="serviceSelection">
+                    <option value="" disabled selected>Quelle prestation souhaitez-vous ?</option>
+                    <option value="manucure-classique">Manucure Classique</option>
+                    <option value="pose-gel">Pose Gel & Résine</option>
+                    <option value="semi-permanent">Vernis Semi-Permanent</option>
+                    <option value="nail-art">Nail Art & Décoration</option>
+                    <option value="extensions">Extensions Ongles</option>
+                    <option value="soin-premium">Soin Mains Premium</option>
+                </select>
+        <button class="btn-confirm">Valider la réservation</button>
+        <button onclick="document.getElementById('modal').style.display='none'" style="background:none; border:none; color:#999; margin-top:10px; cursor:pointer;">Fermer</button>
+    </div>
+</div>
+
+<script>
+    let currentDate = new Date(); // Starts at today
+
+    function renderCalendar() {
+        const monthDisplay = document.getElementById('monthDisplay');
+        const daysHeader = document.getElementById('daysHeader');
+        const slotsGrid = document.getElementById('slotsGrid');
+        
+        // Update Month Text
+        const options = { month: 'long', year: 'numeric' };
+        monthDisplay.innerText = currentDate.toLocaleDateString('fr-FR', options);
+
+        // Find Start of Week (Monday)
+        let startOfWeek = new Date(currentDate);
+        const day = startOfWeek.getDay();
+        const diff = startOfWeek.getDate() - day + (day === 0 ? -6 : 1); 
+        startOfWeek.setDate(diff);
+
+        daysHeader.innerHTML = '';
+        slotsGrid.innerHTML = '';
+
+        const dayNames = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven'];
+
+        // Generate the 5 columns
+        for (let i = 0; i < 5; i++) {
+            let d = new Date(startOfWeek);
+            d.setDate(startOfWeek.getDate() + i);
+
+            // 1. Render Header
+            const isToday = d.toDateString() === new Date().toDateString();
+            daysHeader.innerHTML += `
+                <div class="cal-day-col ${isToday ? 'is-today' : ''}">
+                    <span class="cal-day-name">${dayNames[i]}</span>
+                    <span class="cal-day-num">${d.getDate()}</span>
+                </div>
+            `;
+
+            // 2. Render Slots (09:00 to 18:00, every 30 mins)
+            let col = document.createElement('div');
+            col.className = 'day-slots-container';
+            
+            for (let hour = 9; hour < 18; hour++) {
+                for (let min of ['00', '30']) {
+                    const time = `${hour < 10 ? '0' + hour : hour}:${min}`;
+                    const btn = document.createElement('button');
+                    btn.className = 'cal-slot-btn';
+                    btn.innerText = time;
+                    btn.onclick = () => openModal(d, time);
+                    col.appendChild(btn);
+                }
+            }
+            slotsGrid.appendChild(col);
+        }
+    }
+
+    function openModal(date, time) {
+        const modal = document.getElementById('modal');
+        const details = document.getElementById('selectedDetails');
+        details.innerText = date.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' }) + " à " + time;
+        modal.style.display = 'flex';
+    }
+
+    document.getElementById('nextMonth').onclick = () => {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar();
+    };
+
+    document.getElementById('prevMonth').onclick = () => {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar();
+    };
+
+    renderCalendar();
+</script>
+
+</body>
+</html>
+
+        <!-- 11. INSTAGRAM FEED SECTION -->
+        <section class="py-16 bg-bgMain overflow-hidden border-t border-gray-100 fade-in-section">
+           
+<div class="text-center mb-12 fade-in-section">
+                    <h2 class="text-5xl font-serif font-bold text-textMain mb-4 relative inline-block">
+    Suivez-nous
+    <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-primary/70 rounded"></span>
+</h2>
+                    <p class="text-textMuted text-lg mt-4">Rejoignez notre communauté</p>
+                </div>
+
+            <!-- Feed Strip -->
+            <div class="flex overflow-x-auto lg:grid lg:grid-cols-6 gap-0 hide-scrollbar scroll-smooth">
+                <a href="https://www.instagram.com/p/DW_DRGslKIN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="block relative group min-w-[200px] lg:min-w-0 flex-shrink-0">
+                    <img src="PHOTO1.JPEG" alt="Post Instagram 1" class="w-full h-auto aspect-square object-cover">
+                    <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-solid fa-heart text-white text-2xl"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/p/DWxIUp2ktaK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="block relative group min-w-[200px] lg:min-w-0 flex-shrink-0">
+                    <img src="PHOTO2.JPEG" alt="Post Instagram 2" class="w-full h-auto aspect-square object-cover">
+                    <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-solid fa-heart text-white text-2xl"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/p/DXBhIe2ggI8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="block relative group min-w-[200px] lg:min-w-0 flex-shrink-0">
+                    <img src="PHOTO3.JPEG" alt="Post Instagram 3" class="w-full h-auto aspect-square object-cover">
+                    <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-solid fa-heart text-white text-2xl"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/p/DW5r4SYDYWL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="block relative group min-w-[200px] lg:min-w-0 flex-shrink-0">
+                    <img src="PHOTO4.JPEG" alt="Post Instagram 4" class="w-full h-auto aspect-square object-cover">
+                    <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-solid fa-heart text-white text-2xl"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/p/DW7iTNZEt0S/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="block relative group min-w-[200px] lg:min-w-0 flex-shrink-0">
+                    <img src="PHOTO5.JPEG" alt="Post Instagram 5" class="w-full h-auto aspect-square object-cover">
+                    <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-solid fa-heart text-white text-2xl"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/p/DWs6L2-FFD_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="block relative group min-w-[200px] lg:min-w-0 flex-shrink-0">
+                    <img src="PHOTO6.JPEG" alt="Post Instagram 6" class="w-full h-auto aspect-square object-cover">
+                    <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-solid fa-heart text-white text-2xl"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white font-medium shadow-md hover:shadow-lg transition-all hover:-translate-y-1" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);">
+                    <i class="fa-brands fa-instagram"></i> Suivre @Céline_nails_paris
+                </a>
+            </div>
+            
+            <style>
+                .hide-scrollbar::-webkit-scrollbar { display: none; }
+                .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+            </style>
+        </section>
+    </main>
+
+    <!-- 12. FOOTER -->
+    <footer id="contact" class="bg-dark text-white pt-16 pb-8">
+        <div class="container-custom">
+            <!-- Newsletter Bar -->
+            <div class="bg-white/5 p-6 rounded-2xl mb-12 flex flex-col md:flex-row items-center justify-between gap-6 border border-white/10">
+                <div>
+                    <h4 class="font-serif text-xl font-bold mb-1">Rejoignez notre liste VIP</h4>
+                    <p class="text-gray-300 text-sm">Recevez nos offres exclusives et conseils beauté.</p>
+                </div>
+                <form class="flex w-full md:w-auto" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Votre adresse email" required class="bg-white/10 text-white placeholder-gray-400 px-4 py-3 rounded-l-full focus:outline-none focus:ring-2 focus:ring-primary w-full md:w-64 border border-white/20 border-r-0">
+                    <button type="submit" class="bg-primary hover:bg-primaryDark text-white px-6 py-3 rounded-r-full font-medium transition-colors border border-primary">
+                        S'abonner
+                    </button>
+                </form>
+            </div>
+
+            <!-- Footer Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Col 1: Logo & About -->
+                <div>
+                    <a href="#" class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-sparkles text-primary"></i>
+                        <span class="font-serif text-2xl font-bold tracking-wide">Céline</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        L'art de sublimer vos mains, l'attention que vous méritez. Votre parenthèse beauté au cœur de Paris.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="TikTok" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation -->
+                <div>
+                    <h4 class="font-serif text-lg font-bold mb-4">Navigation</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#accueil" class="hover:text-primary transition-colors">Accueil</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Nos Services</a></li>
+                        <li><a href="#tarifs" class="hover:text-primary transition-colors">Tarifs</a></li>
+                        <li><a href="#galerie" class="hover:text-primary transition-colors">Galerie</a></li>
+                        <li><a href="#avis" class="hover:text-primary transition-colors">Avis clients</a></li>
+                        <li><a href="#carte-cadeau" class="hover:text-primary transition-colors">Carte Cadeau</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Services Rapides -->
+                <div>
+                    <h4 class="font-serif text-lg font-bold mb-4">Prestations</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#tarifs" class="hover:text-primary transition-colors">Manucure Classique</a></li>
+                        <li><a href="#tarifs" class="hover:text-primary transition-colors">Pose Gel & Résine</a></li>
+                        <li><a href="#tarifs" class="hover:text-primary transition-colors">Nail Art</a></li>
+                        <li><a href="#tarifs" class="hover:text-primary transition-colors">Semi-Permanent</a></li>
+                        <li><a href="#tarifs" class="hover:text-primary transition-colors">Extensions Ongles</a></li>
+                        <li><a href="#tarifs" class="hover:text-primary transition-colors">Soin Mains Premium</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact -->
+                <div>
+                    <h4 class="font-serif text-lg font-bold mb-4">Contact & Horaires</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-primary"></i>
+                            <span>12 Rue de Rivoli<br>75001 Paris</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-primary"></i>
+                            <a href="tel:+33123456789" class="hover:text-white transition-colors">+33 1 23 45 67 89</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-primary"></i>
+                            <a href="mailto:contact@Céline-nails.fr" class="hover:text-white transition-colors">contact@Céline-nails.fr</a>
+                        </li>
+                        <li class="flex items-start gap-3 pt-2 border-t border-white/10 mt-2">
+                            <i class="fa-regular fa-clock mt-1 text-primary"></i>
+                            <span>Lun–Ven : 10h–20h<br>Sam : 9h–19h<br>Dim : Fermé</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+                <p>&copy; 2026 Céline Nails & Beauty. Tous droits réservés.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+                    <a href="#" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                    <a href="#" class="hover:text-white transition-colors">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Elements -->
+    
+    <!-- WhatsApp / Phone Float -->
+    <a href="tel:+33123456789" aria-label="Nous appeler" class="fixed bottom-6 right-6 w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-primaryDark hover:scale-110 transition-all z-40">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <!-- Back to Top Float -->
+    <button id="back-to-top" aria-label="Retour en haut" class="fixed bottom-24 right-6 w-10 h-10 bg-textMain text-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary opacity-0 invisible transition-all duration-300 z-40 translate-y-4">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-[0_-4px_10px_rgba(0,0,0,0.05)] z-50 transform translate-y-full transition-transform duration-500 flex flex-col md:flex-row items-center justify-between p-4 px-6 md:px-12 gap-4">
+        <div class="text-sm text-textMuted text-center md:text-left">
+            <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site. En continuant à naviguer, vous acceptez notre <a href="#" class="text-primary underline">politique de confidentialité</a>.</p>
+        </div>
+        <div class="flex gap-3 shrink-0">
+            <button id="cookie-refuse" class="px-4 py-2 text-sm border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">Refuser</button>
+            <button id="cookie-accept" class="px-4 py-2 text-sm bg-primary text-white rounded-full hover:bg-primaryDark transition-colors shadow-sm">Accepter</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Sticky Navbar & Active States
+            const navbar = document.getElementById('navbar');
+            const logoText = navbar.querySelector('.logo-text');
+            const mobileMenuBtnIcon = document.querySelector('#mobile-menu-btn i');
+            
+            const handleScroll = () => {
+                if (window.scrollY > 80) {
+                    navbar.classList.add('scrolled');
+                    // Ensure text contrasts well
+                    navbar.classList.remove('text-white');
+                    navbar.classList.add('text-textMain');
+                } else {
+                    navbar.classList.remove('scrolled');
+                    navbar.classList.add('text-white');
+                    navbar.classList.remove('text-textMain');
+                }
+            };
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // init
+
+            // 2. Mobile Menu Toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if(mobileMenu.classList.contains('hidden')) {
+                    mobileMenuBtnIcon.classList.remove('fa-xmark');
+                    mobileMenuBtnIcon.classList.add('fa-bars');
+                } else {
+                    mobileMenuBtnIcon.classList.remove('fa-bars');
+                    mobileMenuBtnIcon.classList.add('fa-xmark');
+                }
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtnIcon.classList.remove('fa-xmark');
+                    mobileMenuBtnIcon.classList.add('fa-bars');
+                });
+            });
+
+            // 3. Pricing Tabs
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active from all btns
+                    tabBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-primary', 'text-white', 'shadow-md');
+                        b.classList.add('text-textMuted');
+                    });
+                    
+                    // Add active to clicked
+                    btn.classList.add('active', 'bg-primary', 'text-white', 'shadow-md');
+                    btn.classList.remove('text-textMuted');
+
+                    // Hide all contents
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Show target content
+                    const targetId = btn.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+
+            // 4. Intersection Observer for Fade-In
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-section').forEach(section => {
+                observer.observe(section);
+            });
+
+            // 5. Back to Top Button
+            const backToTopBtn = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+                    backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-4');
+                    backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // 6. Cookie Consent Banner
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('cookie-accept');
+            const refuseBtn = document.getElementById('cookie-refuse');
+
+            // Check if already consented
+            if (!localStorage.getItem('cookieConsent')) {
+                // Show banner after short delay
+                setTimeout(() => {
+                    cookieBanner.classList.remove('translate-y-full');
+                }, 1000);
+            }
+
+            const hideBanner = () => {
+                cookieBanner.classList.add('translate-y-full');
+            };
+
+            acceptBtn.addEventListener('click', () => {
+                localStorage.setItem('cookieConsent', 'accepted');
+                hideBanner();
+            });
+
+            refuseBtn.addEventListener('click', () => {
+                localStorage.setItem('cookieConsent', 'refused');
+                hideBanner();
+            });
+        });
+    </script>
+</body>
+</html>
